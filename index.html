@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aristotle Quotes</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="content">
+        <div>
+            <h1 class="im-fell">Aristotle</h1>
+            <h2 class="im-fell">Quotes</h2>
+        </div>
+        <img id="aristotle" src="https://hips.hearstapps.com/hmg-prod/images/aristotle--getty.jpg?crop=1xw:0.75xh;center,top&resize=1200:*">
+        <h3 class="im-fell" id="quote"></h3>
+        <button id="button" class="im-fell" onclick="setQuote()">New Quote</button>
+    </div>
+    <script>
+        const quoteList = [
+            "Knowing yourself is the beginning of all wisdom.",
+            "It is the mark of an educated mind to be able to entertain a thought without accepting it.",
+            "Patience is bitter, but its fruit is sweet.",
+            "Without friends, no one would want to live, even if he had all other goods.",
+            "It is during our darkest moments that we must focus to see the light.",
+            "Virtue lies in our power, and similarly so does vice; because where it is in our power to act, it is also in our power not to act.",
+            "Excellence is never an accident. It is always the result of high intention, sincere effort, and intelligent execution; it represents the wise choice of many alternatives - choice, not chance, determines your destiny.",
+            "The wise man does not expose himself needlessly to danger, since there are few things for which he cares sufficiently; but he is willing, in great crises to give even his life-knowing that under certain conditions it is not worthwhile to live.",
+            "Whosoever is delighted in solitude is either a wild beast or a god.",
+            "We praise a man who feels angry on the right grounds and against the right persons and also in the right manner at the right moment and for the right length of time.",
+            "Moral excellence comes about as a result of habit. We become just by doing just acts, temperate by doing temperate acts, brave by doing brave acts.",
+            "The worst form of inequality is to try to make unequal things equal.",
+            "Those who know, do. Those who understand, teach.",
+            "We must no more ask whether the soul and body are one than ask whether the wax and the figure impressed on it are one.",
+            "You will never do anything in this world without courage. It is the greatest quality of the mind next to honor.",
+            "Educating the mind without educating the heart is no education at all.",
+            "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+            "He who cannot be a good follower cannot be a good leader.",
+            "To avoid criticism say nothing, do nothing, be nothing.",
+            "Happiness belongs to the self-sufficient."
+        ]
+        
+        function setQuote() {
+            let quote = quoteList[(Math.floor(Math.random() * quoteList.length))];
+            var quoteElement = document.getElementById("quote");
+            quoteElement.innerHTML = quote;
+        }
+
+        setQuote()
+    </script>
+</body>
+</html>
